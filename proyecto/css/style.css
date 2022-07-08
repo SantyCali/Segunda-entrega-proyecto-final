@@ -40,6 +40,7 @@ header{
 
 
 header img{
+    object-fit: cover;
     width: 180px;
     height: 180px;
     padding: 25px;
@@ -94,6 +95,18 @@ footer {
     padding-top: 40px;
     color: white;
 }
+
+
+
+
+footer img{
+    object-fit: cover;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    transition: ease-in .25s;
+}
+
 
 .footer-content{
     display: flex;
@@ -152,6 +165,10 @@ footer {
 
 .card{
     margin: 0px 50px 50px ;
+}
+
+.card img{
+    object-fit: cover;
 }
 
 
@@ -239,15 +256,16 @@ footer {
 section .section-servicios-1 {
     display: grid;
     height: 500px;
+    border-radius: 14px;
     margin-top: 50px;
     background-color: rgb(236, 144, 68);
-    grid-template-columns: repeat(8,1fr);
-    grid-template-rows:repeat(8,1fr);
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows:repeat(4,1fr);
 }
 
 section .section-servicios-1 .mercado-pago{
-    grid-column: 2;
-    grid-row: 2;
+    grid-column: 1;
+    grid-row: 1;
 
 
 }
@@ -259,9 +277,10 @@ section .section-servicios-1 .mercado-pago img{
 }
 
 section .section-servicios-1 .p-mercado-pago{
-    grid-column: 4 / 8;
-    grid-row: 2;
+    grid-column: 2 / 5;
+    grid-row: 1;
     margin-top: 130px;
+    margin-left: 100px;
    
 }
 
@@ -278,6 +297,22 @@ section .section-servicios-1 .p-mercado-pago p:hover{
     transition: all 0.2s;
 }
 
+@media screen and (max-width: 992px){
+    section .section-servicios-1 {
+        height: 120vh;
+    }
+
+    section .section-servicios-1 .mercado-pago{
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    section .section-servicios-1 .p-mercado-pago{
+        grid-column: 2;
+        grid-row: 3;
+    }
+}
+
 
 @media screen and (max-width: 978px){
     section .section-servicios-1 {
@@ -285,25 +320,43 @@ section .section-servicios-1 .p-mercado-pago p:hover{
     }
 
     section .section-servicios-1 .mercado-pago{
-        grid-column: 4;
+        grid-column: 2;
         margin-top: 10px;
     }
 
     section .section-servicios-1 .p-mercado-pago{
-        grid-column: 4;
+        grid-column: 2;
         grid-row: 3;
     }
-}
 
-@media screen and (max-width: 376px){
-    section .section-servicios-1 .mercado-pago img{
-        object-fit: cover;
-        width: 280px;
-        height: 280px;
-        border-radius: 5px;
+    section .section-servicios-2 {
+        height: 150vh;
     }
 
+    section .section-servicios-2 .parrafo-recargas {
+        grid-column: 2;
+    }
+
+    section .section-servicios-2 .claro{
+        grid-column: 2;
+    }
+
+    section .section-servicios-2 .movistar{
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    section .section-servicios-2 .personal {
+        grid-column: 2;
+        grid-row: 4;
+    }
+
+
+
 }
+
+
+
 
 @media screen and (max-width: 481px){
     section .section-servicios-1 .mercado-pago img{
@@ -315,22 +368,41 @@ section .section-servicios-1 .p-mercado-pago p:hover{
 
 }
 
+@media screen and (max-width: 376px){
+    section .section-servicios-1 .mercado-pago img{
+        object-fit: cover;
+        width: 280px;
+        height: 280px;
+        border-radius: 5px;
+    }
+    
+    section .section-servicios-1 .mercado-pago{
+        grid-column: 1;
+    }
+    
+    section .section-servicios-1 .p-mercado-pago{
+        grid-column: 1;
+        margin-left: -5px;
+    }
+
+}
 /* --- SECTION SERVICIOS 2 --- */
 
 .section-servicios-2 {
     display: grid;
     height: 70vh;
+    border-radius: 14px;
     margin-top: 200px;
     margin-bottom: 200px;
     background-color: rgb(236, 144, 68);
-    grid-template-columns: repeat(10,1fr);
-    grid-template-rows:repeat(10,1fr);
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows:repeat(4,1fr);
 }
 
 
 .section-servicios-2 .parrafo-recargas{
-    grid-column: 4 / 7;
-    grid-row: 2;
+    grid-column: 3 / 4;
+    grid-row: 1;
 
 }
 
@@ -351,8 +423,8 @@ section .section-servicios-1 .p-mercado-pago p:hover{
 
 /* CLARO */
 .section-servicios-2 .claro {
-    grid-column: 2;
-    grid-row: 5;
+    grid-column: 1;
+    grid-row: 3;
 
 }
 
@@ -365,8 +437,8 @@ section .section-servicios-1 .p-mercado-pago p:hover{
 /* MOVISTAR */
 
 .section-servicios-2 .movistar{
-    grid-column: 5;
-    grid-row: 5;
+    grid-column: 3;
+    grid-row: 3;
 }
 
 
@@ -379,8 +451,8 @@ section .section-servicios-1 .p-mercado-pago p:hover{
 /* PERSONAL */
 
 .section-servicios-2 .personal{
-    grid-column: 8;
-    grid-row: 5;
+    grid-column: 5;
+    grid-row: 3;
 }
 
 
@@ -651,7 +723,6 @@ section .section-servicios-1 .p-mercado-pago p:hover{
 
 .ubicacion{
     margin-top: 100px;
-    margin-left: 200px;
     display: flex;
     margin-bottom: 100px;
     width: 1200px;
@@ -704,3 +775,35 @@ section .section-servicios-1 .p-mercado-pago p:hover{
 
 
 /* ---------- Fin de Ubicación ----------- */
+
+
+
+
+
+
+/* ----------- Contacto.html ------------ */
+
+
+.section-contacto{
+    margin-top: 10vh;
+    margin-bottom: 25vh;
+    border-radius: 15px;
+    padding: 12vh;
+    background-color: rgb(235, 94, 24);
+}
+
+.section-contacto h1{
+    background-color: white;
+    width: 300px;
+    border-radius: 14px;
+    text-align: center;
+}
+
+.section-contacto-2{
+    margin-bottom: 100px;
+}
+
+.section-contacto-2 .container img{
+    object-fit: cover;
+    width: 360px;
+}
